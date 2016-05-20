@@ -7,11 +7,11 @@ var SpaceAge = function(seconds) {
 	var earthYears = seconds / 31557600; //orbital period (year) in seconds
 	
 	var format = function(number) {
-		//I had not restricted result to 2 decimal places
+		//Restricted result to 2 decimal places
 		//And toFixed returns a string
 		//So looked up a way to return a two-decimal place number, but it seems like Number(x.toFixed(2)) is the normal way
 		//then I decided to separate it out into it's own 'format' function
-		return Number(number.toFixed(2));
+		return number.toFixed(2);
 	};
 	
    //I messed up and used 'this.format()' and 'formatNumber()' instead of 'format()' 
@@ -28,11 +28,11 @@ var SpaceAge = function(seconds) {
 	};
 	
 	self.onVenus = function() {
-		return format(earthYears / 0.61519726); //Venus: orbital period 0.61519726 Earth years
+		return format(earthYears / 0.2408467); //Venus: orbital period 0.61519726 Earth years
 	};
 	
 	self.onMars = function() {
-		return format(earthYears / 1.8808158); //Mars: orbital period 1.8808158 Earth years		
+		return format(earthYears) / 1.8808158; //Mars: orbital period 1.8808158 Earth years		
 	};
 	
 	self.onJupiter = function() {

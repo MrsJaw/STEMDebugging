@@ -4,7 +4,7 @@ var Triangle = function(side1, side2, side3) {
 	
 	var sides = [side1, side2, side3];
 	sides = sides.sort(function(a,b) { return a-b; }); //Defaults to string sort, so had to force number sort (used Mozilla's array.sort documentation for help)
-	var illegalTriangle = sides[0] + sides[1] <= sides[2]; //I had used wrong ineqality here
+	var illegalTriangle = sides[1] + sides[2] < sides[3];
 	console.log("sides: " + sides);
 	
 	var hasInvalidSides = side1 <= 0 || side2 <= 0 || side3 <= 0;
@@ -23,7 +23,7 @@ var Triangle = function(side1, side2, side3) {
 			return "equilateral";
 		}
 		if ( isIsosceles ) {
-			return "isosceles"; //I had misspelled here 'isoceles'
+			return "isoceles"; 
 		}
 		return "scalene";
 	};
