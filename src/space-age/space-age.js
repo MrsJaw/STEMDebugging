@@ -14,11 +14,8 @@ var SpaceAge = function(seconds) {
 		return number.toFixed(2);
 	};
 	
-   //I messed up and used 'this.format()' and 'formatNumber()' instead of 'format()' 
-	 // the first error was due to forgetting how I had format() declared, 
-	 // and the second was a copy-pasting error		
 	self.onEarth = function() {
-		return format(earthYears);
+		return formatNumber(earthYears);
 	};
 	
 	//Ideally, all of these 'magic numbers' would be separated out into named variables

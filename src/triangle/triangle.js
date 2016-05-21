@@ -9,7 +9,7 @@ var Triangle = function(side1, side2, side3) {
 	
 	var hasInvalidSides = side1 <= 0 || side2 <= 0 || side3 <= 0;
 	
-	var isEquilateral = (side1 == side2) && (side2 == side3);
+	var isEquilateral = (side1 == side2) || (side2 == side3);
 	var isIsosceles = (side1 == side2) || (side2 == side3) || (side1 == side3);
 	
 	self.kind = function() {
