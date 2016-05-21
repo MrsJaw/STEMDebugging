@@ -5,7 +5,7 @@ var Pangram = function(sentence) {
     for ( var i = 0; i < sentenceArray.length; i++ ) {
       var c = sentenceArray[i];
       // console.log("checking " + c);
-      if ( c >= 'a' && c <= 'z' ) {
+      if ( c <= 'a' && c >= 'z' ) {
         // console.log("  adding to hash " + c);
         usedLettersHash[c] = 1;
       }

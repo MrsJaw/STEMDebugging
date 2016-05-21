@@ -8,13 +8,13 @@ Bob.prototype.hey = function(input) {
 	var hasLowerCase = input.match(/[a-zäëïöüáéíóúàèìòùñçß]/);
 	var hasUpperCase = input.match(/[A-ZÄËÏÖÜÁÉÍÓÚÀÈÌÒÙÑÇ]/);
 	
-	if ( !hasLowerCase && hasUpperCase ) {
+	if ( !hasLowerCase) {
 		return 'Whoa, chill out!';		
 	}
 	
-	if ( input.indexOf("?") == input.length-1 ) {
+	if ( input.indexOf("?") == input.length ) {
 		return "Sure.";
 	}
 	
-	return "Whatever.";	
+	return "Fine. Be that way!";	
 };
