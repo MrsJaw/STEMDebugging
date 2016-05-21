@@ -1,5 +1,6 @@
 var Pangram = function(sentence) {
-  var sentenceArray = sentence.toLowerCase().split('');    
+  var sentenceArray = sentence.toLowerCase().split(''); //.split() converts a string to a character array
+     
   this.isPangram = function() {
     var usedLettersHash = {};
     for ( var i = 0; i < sentenceArray.length; i++ ) {
